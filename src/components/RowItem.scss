@@ -1,0 +1,171 @@
+@import 'mediaQueries';
+
+.row-item{
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 60%;
+    text-decoration: none;
+    border-bottom: solid rgb(199, 198, 198) 1px;
+    cursor: pointer;
+
+    @include respond(tab-port){
+        width: 100%;
+    }
+
+
+    &:hover{
+        background-color: rgba(109, 188, 240, 0.377);
+    }
+
+    &-photo{
+        width: 20%;
+        height: 80%;
+        overflow: hidden;
+    }
+
+    &-info{
+        flex-grow: 1;
+        height: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-block{
+            height: 12rem;
+            width: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            &:last-child{
+                margin-left: 3rem;
+            }
+
+            @include respond(iphoneXS){
+                height: 8rem;
+                width: 8rem;
+                &:last-child{
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &-social{
+            height: 2.5rem;
+            width: 3rem;
+            fill: rgb(68, 137, 202);
+            position: absolute;
+            margin-left: -3rem;
+
+            @include respond(iphoneXS){
+                height: 2rem;
+                width: 2rem;
+                margin-left: -.4rem;
+            }
+        }
+    }
+
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+}
+
+.marked-border-right{
+    border-right: solid lightslategray 1px !important;
+    border-left: solid lightslategray 1px !important;
+}
+
+.social-info-container{
+    display: flex;
+    width: 100%;
+}
+
+.row-image{
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+}
+
+.rank-block{
+    font-size: clamp(3rem, 8vw, 10rem);
+    text-align: center;
+    color: black;
+}
+
+.name-block{
+    text-align: center;
+    color: rgb(29, 17, 141);
+
+    @include respond(iphoneXS){
+        font-size: 1.5rem;
+    }
+}
+
+.stars-block{
+    fill: rgb(68, 137, 202);
+    text-align: center;
+}
+
+.social-block{
+    font-family: sans-serif;
+    font-size: 1.4rem;
+
+    @include respond(iphoneXS){
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+    }
+}
+
+.show-on-mobile{
+    visibility: hidden;
+    position: absolute;
+    @include respond(iphoneXS){
+        visibility: visible;
+        position: relative;
+    }
+}
+
+.hide-on-mobile{
+    visibility: visible;
+
+    @include respond(iphoneXS){
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+.mobile-rank-container{
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+    border-radius: 10px;
+}
+
+.mobile-rank{
+    font-size: 5rem;
+}
+
+.info-text-block{
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+
+    @include respond(iphoneXS){
+        font-size: 1rem;
+    }
+}
+
+.rounded{
+    border-radius: 500px !important;
+}
+
+.grey-background{
+    background-color: lightskyblue;
+}

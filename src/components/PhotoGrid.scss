@@ -1,0 +1,10 @@
+.grid-container{
+    height: auto;
+    display: flex;
+    background-color: gold;
+}
+
+.grid-item{
+    flex-basis: 20%;
+    margin: 0;
+}

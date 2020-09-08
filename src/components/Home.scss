@@ -1,0 +1,145 @@
+@import 'mediaQueries';
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modal-icon{
+    fill: rgb(45, 45, 141);
+    width: 5rem;
+}
+
+.create-button{
+    background-color: rgb(21, 179, 55);
+    color: white;
+    padding: .5rem 2rem;
+    border-radius: 50px;
+    position: absolute;
+    margin-top: 5rem;
+    right: 20rem;
+    cursor: pointer;
+    box-shadow: 0rem 1rem 1rem #6b6969;
+    transition: all .3s;
+    text-decoration: none;
+    font-size: clamp(1.5rem, 1.8vw, 2rem);
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    &:active{
+        transform: scale(1) translateY(1rem);
+        box-shadow: none;
+    }
+
+    @include respond(tab-port){
+        right: 15rem;
+        padding: 0 .5rem;
+    }
+
+    @include respond(phone){
+        right: 3rem;
+        margin-top: clamp(6rem, 2vh, 4.8rem);
+        padding: .5rem 2rem;
+    }
+}
+
+.pagination-container{
+    margin: 3rem 1rem;
+    flex-basis: 100%;
+    max-width: 80%;
+  }
+  
+  .pagination{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    list-style: none;
+  }
+  
+  .page-item{
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border: solid lightgrey 1px;
+    background-color: rgba(210, 217, 226, 0.699);
+    padding: 1rem .5rem;
+
+    @include respond(phone){
+        padding: 0;
+    }
+  
+    &:hover{
+      background-color: #acc5e6;
+    }
+  }
+  
+  .page-link{
+    text-decoration: none;
+    color: rgb(34, 48, 114);
+  }
+
+.filter-box{
+    display: flex;
+    position: absolute;
+    left: 18%;
+    margin-top: 6rem;
+    font-size: clamp(1.5rem, 1.8vw, 2rem);
+
+
+    @include respond(tab-port){
+        left: 17%;
+    }
+
+    @include respond(phone){
+        left: 5%;
+        margin-top: clamp(6rem, 2vh, 4.8rem);    
+    }
+    
+    &-item{
+        border: solid 1px rgb(108, 183, 233);
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 7px;
+        overflow: hidden;
+
+        &:not(:last-child){
+            margin-right: .5rem;
+        }
+    }
+
+    &-input{
+        opacity: 0;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    &-label{
+        margin-left: .5rem;
+        font-size: 1.7rem;
+        color: grey;
+    }
+}
+
+.check-box-wrapper{
+    width: 5.5rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    text-align: center;
+
+
+    @include respond(tab-port){
+        width: 4rem;
+    }
+}
+
+.selected{
+    color: rgb(108, 183, 233);
+    background-color: rgb(255, 255, 255);
+    text-decoration: underline;
+}

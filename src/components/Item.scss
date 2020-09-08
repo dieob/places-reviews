@@ -1,0 +1,80 @@
+@import 'mediaQueries'; 
+
+.item{
+    background-color: transparent;
+    flex-basis: 22%;
+    flex-shrink: 0;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    height: 35rem;
+    margin: 1rem 1rem;
+    transition: all .2s;
+    text-decoration: none;
+    color: inherit;
+
+    @include respond(tab-port){
+        flex-basis: 30%;
+    }
+
+    @include respond(phone){
+        flex-basis: 42%;
+        height: 25rem;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+    }
+
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    &-photo {
+        background-color: transparent;
+        height: 70%;
+        overflow: hidden;
+    }
+    
+    &-info {
+        background-color: rgb(172, 197, 230);
+        height: 15%;
+        text-align: center;
+        padding-top: 1rem;    
+    }
+    
+    &-stars {
+        background-color: rgb(231, 231, 233);
+        height: 15%;
+        text-align: center;
+        padding-top: 1rem; 
+        fill: rgb(29, 116, 216);
+    }
+}
+
+.image{
+    max-width: 125%;
+    max-height: 100%;
+    text-align: center;
+    transform: translateX(-3rem);
+}
+
+.photo-count{
+    position: absolute;
+    transform: translateY(-35px);
+    background-color: white;
+    opacity: .6;
+    margin-left: .5rem;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+.photo-icon{
+    fill: black;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 1rem;
+    padding-top: .5rem;
+}
+

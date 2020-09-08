@@ -1,0 +1,11 @@
+@import './mediaQueries';
+
+.stars{
+    height: 2rem;
+    width: 2rem;
+
+    @include respond(iphoneXS){
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

@@ -1,0 +1,126 @@
+@import 'mediaQueries';
+
+.search-box {
+    background-color: lightgrey;
+    /*flex: 0 0 100%; /* fg: 0, fs: 0, fb: 100% */
+    width: 100%;
+    height: 7rem;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  //AUTOSUGGEST STYLE
+  
+  .react-autosuggest__container {
+    position: relative;
+  }
+  
+  .react-autosuggest__input {
+    font-family: inherit;
+    font-size: 2rem;
+    background-color: white;
+    width: 30rem;
+    height: 4rem;
+    border: none;
+    padding: 2rem;
+    border-bottom: 5px solid lightgrey;
+    transition: all .2s;
+
+    @include respond(phone){
+      width: 20rem;
+      font-size: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    @include respond(tab-port){
+      width: 20rem;
+      margin-left: 4rem;
+    }
+  
+    &:focus {
+      outline: none;
+      width: 35rem;
+      border-bottom: 5px solid rgb(0, 187, 187);
+
+      @include respond(phone){
+        width: 22rem;
+      }
+
+      @include respond(tab-port){
+        width: 22rem;
+      }
+
+    }
+  }
+
+  .react-autosuggest__input--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  .react-autosuggest__suggestions-container {
+    display: none;
+  }
+  
+  .react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    top: 51px;
+    width: 45rem;
+    background-color: #fff;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+  }
+  
+  .react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 45rem;
+  }
+  
+  .react-autosuggest__suggestion {
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .react-autosuggest__suggestion--highlighted {
+    background-color: rgb(154, 197, 231);
+  }
+  
+  .inputContainer {
+    position: relative;
+  }
+
+.search-icon{
+    width: 3rem;
+    height: 3rem;
+    transform: translateX(-4rem);
+    fill: rgb(85, 83, 83);
+}
+
+
+.modal{
+  height: 20rem;
+  width: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 2rem 1rem;
+
+  &-text{
+    color: grey;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}

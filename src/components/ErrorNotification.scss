@@ -1,0 +1,63 @@
+@import './mediaQueries';
+
+.fancy-error-class{
+    height: 15rem;
+    background-color: rgb(170, 22, 22);
+    position: absolute;
+    width: 30%;
+    padding: 2rem 2rem;
+    left: 35%;
+    top: 45%;
+    opacity: .8;
+    animation-name: showError;
+    animation-duration: .5s;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(phone){
+        width: 93.5%;
+        left: 3%;
+        top:40%;
+    }
+
+    @include respond(tab-port){
+        width: 60%;
+        left: 20%;
+        top: 35%;
+    }
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.error-text{
+    color: white;
+    text-align: center;
+}
+
+.error-close{
+    text-decoration: none;
+    background-color: lightgrey;
+    width: 4rem;
+    height: 3rem;
+    text-align: center;
+    margin-right: -1.5rem;
+    transform: translateY(-5.5rem);
+
+}
+
+@keyframes showError {
+    0% {
+        transform: scale(.1);
+    }
+  
+    80%{
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1); 
+    }
+}

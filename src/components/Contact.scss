@@ -1,0 +1,16 @@
+@import './mediaQueries';
+
+.contact-container{
+    width: 50%;
+    color: black;
+    margin: 0 auto;  
+    height: 80vh;  
+
+    @include respond(tab-port){
+        width: 80%;
+    }
+
+    @include respond(phone){
+        width: 80%;
+    }
+}
